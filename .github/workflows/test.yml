@@ -18,7 +18,7 @@ jobs:
       - name: Install cbdinocluster
         run: |
           mkdir -p "$HOME/bin"
-          wget -nv -O "$HOME/bin/cbdinocluster" https://github.com/couchbaselabs/cbdinocluster/releases/download/v0.0.118/cbdinocluster-linux-amd64
+          wget -nv -O "$HOME/bin/cbdinocluster" https://github.com/couchbaselabs/cbdinocluster/releases/download/v0.0.128/cbdinocluster-linux-amd64
           chmod +x "$HOME/bin/cbdinocluster"
           echo "$HOME/bin" >> $GITHUB_PATH
       - name: Install s3mock
@@ -36,7 +36,7 @@ jobs:
             columnar: true
             nodes:
               - count: 3
-                version: 2.2.0-1314
+                version: 3.0.0-1092
             docker:
               load-balancer: true
               use-dino-certs: true
